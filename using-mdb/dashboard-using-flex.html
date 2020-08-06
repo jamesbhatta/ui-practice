@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Flex</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="css/mdb.min.css" rel="stylesheet">
+	<!-- Your custom styles (optional) -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			font-family: 'Nunito', sans-serif;
+		}
+		.card-shadow{
+			box-shadow: 0 0px 15px 2px rgba(143, 143, 143, 0.09);
+		}
+		.bg-ink{
+			background-color: #667bf1;
+		}
+		.text-ink{
+			color: #667bf1;
+		}
+		.bg-green{
+			background-color: #24e873;
+		}
+		.text-green{
+			color: #24e873;
+		}
+		.bg-red{
+			background-color: #fc5d51;
+		}
+		.text-red{
+			color: #fc5d51;
+		}
+	</style>
+	<style>
+		.side{
+			flex: 15%;
+			background-color: #384951;
+			min-height: 100vh;
+		}
+		@media only screen and (max-width: 800px) {
+			.side{
+				background-color: #fff;
+				display: none;
+				width: 100%;
+				flex: 100%;
+				position: absolute:
+				top: 0;
+				right: 0;
+			}
+			.main{
+				flex: 100%;
+			}
+		}
+		.main{
+			flex: 85%;
+			background-color: #f9f9f9;
+		}
+		.sidebar-list{
+			font-weight: 400;
+		}
+		.sidebar-list-item{
+			/*margin-top: 10px;*/
+			margin-bottom: px;
+		}
+		.sidebar-list-item a{
+			color: #cbc9c9;
+		}
+		.sidebar-list-item a:hover{
+			color: #fff;
+			color: #25c3ca;
+		}
+		.sidebar-list-item a i{
+			margin-right: 15px;
+		}
+		.sidebar-list-item a span{
+			float: right;
+		}
+		.sidebar-card{
+			background-color: #3b4d55;
+			color: #efefef;
+		}
+		.sidebar-card .card-header{
+			background-color: transparent;
+		}
+		.sidebar-card .card-text{
+			color: #eae6e6!important;
+		}
+		.sidebar-card .btn{
+			border-color: #eae6e6!important;
+			color: #eae6e6!important;
+		}
+
+		.topbar-nav{
+			color: #667bf1;
+		}
+		.topbar-nav i{
+			color: #667bf1;
+		}
+		#dashboard{
+			color: #929394;
+		}
+
+		h5.page-title{
+			font-weight: 500;
+			color: #598aa3;
+			color: #929394;
+		}
+	</style>
+</head>
+<body>
+	<div class="d-flex">
+		<div class="side px-4">
+			<div class="py-4">
+				<h2 class="text-uppercase text-center text-light"><strong><i class="fab fa-asymmetrik text-green fa-lg mr-2"></i>Hyper</strong></h2>
+			</div>
+			<div class="text-light text-uppercase small font-weight-bolder">Navigation</div>
+			<ul class="list-unstyled sidebar-list">
+				<li class="sidebar-list-item">
+					<a class="nav-link" href=""><i class="fas fa-tachometer-alt"></i>Dashboard <span><i class="fas fa-angle-right"></i></span></a>
+				</li>
+				<li class="sidebar-list-item">
+					<a class="nav-link" href=""><i class="fas fa-th-large"></i>Apps<span><i class="fas fa-angle-right"></i></span></a>
+				</li>
+				<li class="sidebar-list-item">
+					<a class="nav-link" href=""><i class="far fa-copy"></i>Pages<span><i class="fas fa-angle-right"></i></span></a>
+				</li>
+				<li class="sidebar-list-item">
+					<a class="nav-link" href=""><i class="fas fa-toolbox"></i>UI Kit<span><i class="fas fa-angle-right"></i></span></a>
+				</li>
+				<li class="sidebar-list-item">
+					<a class="nav-link" href=""><i class="fas fa-grip-horizontal"></i>Forum<span><i class="fas fa-angle-right"></i></span></a>
+				</li>
+				<li class="sidebar-list-item">
+					<a class="nav-link" href=""><i class="far fa-star"></i>Features<span><i class="fas fa-angle-right"></i></span></a>
+				</li>
+			</ul>
+			<div class="card sidebar-card">
+				<div class="card-header pb-0 border-0">
+					<span class="float-right"><i class="fas fa-times"></i></span>
+				</div>
+				<div class="card-body text-center px-0">
+					<div><i class="far fa-chart-bar fa-5x"></i></div>
+					<div class="card-text">
+						<h5 class="font-weight-bold">Lorem Ipsum</h5>
+						Lorem ipsum dolor sit amet, consectetur.
+					</div>
+					<a class="btn btn-outline-white btn-sm mt-4" href="">Upgrade</a>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="card rounded-0" style="box-shadow: 0 2px 2px 0 rgba(143, 143, 143, 0.05);">
+				<div class="d-flex px-4">
+					<ul class="nav topbar-nav ml-auto ">
+						<li class="nav-item align-self-center">
+							<a class="nav-link" href=""><i class="fa fa-cog"></i></a>
+						</li>
+						<li class="nav-item align-self-center">
+							<a class="nav-link grey-text" href=""><i class="fa fa-bell"></i></a>
+						</li>
+						<li class="nav-item d-flex py-2 px-3 align-self-center" style="background-color: #f8f6ff;">
+							<img class="rounded-circle mr-3" src="james.jpg" alt="" style="height: 40px; width: 40px; border-radius: 50%;">
+							<div class="d-flex flex-column">
+								<div>James Bhatta</div>
+								<div>Admin</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="dashboard" class="px-3 py-3">
+				<div>
+					<h5 class="page-title">Dashboard</h5>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="card card-shadow mb-3">
+									<div class="card-body">
+										<div class="d-flex justify-content-between align-items-start">
+											<div>
+												<div class="mb-3">Customers</div>
+												<div><h4><strong>36,254</strong></h4></div>
+											</div>
+											<div class="grey lighten-4 rounded p-2">
+												<span class="text-ink"><i class="fas fa-user-friends fa-lg"></i></span>
+											</div>
+										</div>
+										<div class="small py-3">
+											<span class="text-green font-weight-bold"><i class="fas fa-arrow-up"></i> 5.56 %</span>
+											Since last month
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="card card-shadow mb-3">
+									<div class="card-body">
+										<div class="d-flex justify-content-between align-items-start">
+											<div>
+												<div class="mb-3">Orders</div>
+												<div><h4><strong>5,432</strong></h4></div>
+											</div>
+											<div class="grey lighten-4 rounded p-2">
+												<span class="text-ink"><i class="fas fa-luggage-cart fa-lg"></i></span>
+											</div>
+										</div>
+										<div class="small py-3">
+											<span class="text-red font-weight-bold"><i class="fas fa-arrow-down"></i> 1.04 %</span>
+											Since last month
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="card card-shadow mb-3">
+									<div class="card-body">
+										<div class="d-flex justify-content-between align-items-start">
+											<div>
+												<div class="mb-3">Revenue</div>
+												<div><h4><strong>$ 6,254</strong></h4></div>
+											</div>
+											<div class="grey lighten-4 rounded p-2">
+												<span class="text-ink"><i class="fas fa-dollar-sign fa-lg"></i></span>
+											</div>
+										</div>
+										<div class="small py-3">
+											<span class="text-red font-weight-bold"><i class="fas fa-arrow-up"></i> 7 %</span>
+											Since last month
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="card card-shadow mb-3">
+									<div class="card-body">
+										<div class="d-flex justify-content-between align-items-start">
+											<div>
+												<div class="mb-3">Growth</div>
+												<div><h4><strong>+ 30.56 %</strong></h4></div>
+											</div>
+											<div class="grey lighten-4 rounded p-2">
+												<span class="text-ink"><i class="fas fa-chart-line fa-lg"></i></span>
+											</div>
+										</div>
+										<div class="small py-3">
+											<span class="text-green font-weight-bold"><i class="fas fa-arrow-up"></i> 4.86 %</span>
+											Since last month
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card card-shadow">
+							<div class="p-2">
+								<canvas id="bubbleChart" class=""></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-8">
+						<div class="card card-shadow">
+							<div class="card-body">
+								<div class="d-flex mb-2">
+									<div><strong>Revenue</strong></div>
+									<div class="ml-auto"><i class="fas fa-ellipsis-v"></i></div>
+								</div>
+								<div class="grey lighten-5 p-3">
+									<div class="row">
+										<div class="col-md-6 text-center">
+											<div><small>Current Week</small></div>
+											<i class="fas fa-circle fa-sm text-green mr-2"></i><strong>$ 5,248</strong>
+										</div>
+										<div class="col-md-6 text-center">
+											<div><small>Previous Week</small></div>
+											<i class="fas fa-circle fa-sm text-ink mr-2"></i><strong>$ 6,122</strong>
+										</div>
+									</div>
+								</div>
+								<div class="my-3"></div>
+								<canvas id="lineChart"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card card-shadow">
+							<div class="card-body">
+								<div class="d-flex mb-2">
+									<div><strong>Total Sales</strong></div>
+									<div class="ml-auto"><i class="fas fa-ellipsis-v"></i></div>
+								</div>
+								<div class="grey lighten-5 p-3">
+									<div class="row">
+										<div class="col-md-6 text-center">
+											<div><small>Current Week</small></div>
+											<i class="fas fa-circle fa-sm text-green mr-2"></i><strong>$ 55,248</strong>
+										</div>
+										<div class="col-md-6 text-center">
+											<div><small>Previous Week</small></div>
+											<i class="fas fa-circle fa-sm text-ink mr-2"></i><strong>$ 68,122</strong>
+										</div>
+									</div>
+								</div>
+								<div class="my-3"></div>
+								<canvas id="doughnutChart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script>
+		var ctxBc = document.getElementById('bubbleChart').getContext('2d');
+		var bubbleChart = new Chart(ctxBc, {
+			type: 'bubble',
+			data: {
+				datasets: [{
+					label: 'Green',
+					data: [{
+						x: 3,
+						y: 7,
+						r: 10
+					}],
+					backgroundColor: "#24e873",
+					hoverBackgroundColor: "#ff6384"
+				}, {
+					label: 'Red',
+					data: [{
+						x: 4,
+						y: 7,
+						r: 15
+					}],
+					backgroundColor: "#fc5d51",
+					hoverBackgroundColor: "#44e4ee"
+				}, {
+					label: 'Ink',
+					data: [{
+						x: 5,
+						y: 7,
+						r: 10
+					}],
+					backgroundColor: "#667bf1",
+					hoverBackgroundColor: "#62088A"
+				}]
+			},
+		})
+
+		// Line Chart
+		var ctxL = document.getElementById("lineChart").getContext('2d');
+		var myLineChart = new Chart(ctxL, {
+			type: 'line',
+			data: {
+				labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+				datasets: [{
+					label: "Current Weak",
+					data: [65, 59, 70, 60, 56, 57, 62],
+					backgroundColor: [
+					'transparent'
+					],
+					borderColor: [
+					'rgba(200, 99, 132, .7)',
+					],
+					borderWidth: 2
+				},
+				{
+					label: "Previous Week",
+					data: [59, 55, 74, 61, 53, 54, 67],
+					// data: [65, 59, 80, 81, 56, 55, 40],
+					backgroundColor: [
+					'transparent',
+					],
+					borderColor: [
+					'rgba(0, 10, 130, .7)',
+					],
+					borderWidth: 2
+				}
+				]
+			},
+			options: {
+				responsive: true,
+				legend: {
+					display: false,
+					position: "bottom",
+				},
+				animation: {
+					duration: 1000,
+					easing: "linear",
+				}
+			}
+		});
+
+		// Doughnut Chart
+		//doughnut
+		var ctxD = document.getElementById("doughnutChart").getContext('2d');
+		var myLineChart = new Chart(ctxD, {
+			type: 'doughnut',
+			data: {
+				labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+				datasets: [{
+					data: [300, 50, 100, 40, 120],
+					backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+					hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+				}],
+			},
+
+			options: {
+				responsive: true,
+				legend: {
+					display: false,
+					position: "bottom",
+				},
+				animation: {
+					duration: 4000,
+					easing: "easeOutElastic",
+				}
+			},
+
+		});
+	</script>
+</body>
+</html>

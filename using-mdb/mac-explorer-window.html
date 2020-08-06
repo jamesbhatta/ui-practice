@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Mac Win</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="css/mdb.min.css" rel="stylesheet">
+	<!-- Your custom styles (optional) -->
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="grey lighten-5">
+	<style>
+		/* Titlebar buttons */
+		.close-btn{
+			color: #FF5722;
+		}
+		.max-btn{
+			color: #dea702;
+		}
+		.min-btn{
+			color: #44ad48;
+		}
+
+		/*Sidebar*/
+		.sidebar{
+			background: #e3f2fd;
+			background-color: rgba(227, 242, 253, .85);
+		}
+		.list-icon{
+			color: #454648;
+		}
+		.list-icon i{
+			color: #706e6e;
+			padding-right: 8px;
+		}
+		.list-icon.active,
+		.list-icon:hover{
+			background-color: #8bc9de;
+			padding: 2px 8px;
+			color: #fff;
+			transform: scaleX(1.09);
+		}
+		.list-icon.active i{
+			color: #fff;
+		}
+
+		/* Folders */
+		.folder-wrapper{
+			margin: 15px auto;
+			justify-content: center;
+			align-items: center;
+		}
+		.folder-icon{
+			font-size: 3em;
+			color: #8bc9de;
+		}
+		.folder-wrapper:hover{
+			transform: scale(1.05, 1.05);
+		}
+		.folder-wrapper:hover .folder-icon{
+			color: #dea702;
+		}
+		.folder-wrapper:hover .folder-icon + div{
+			color: #0c3f50;
+		}
+	</style>
+	<!-- Start your project here-->
+	<div class="vh-100" style="background: url('macosx.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+		<div class="container pt-5">
+			<div class="mx-5 px-5 pt-5">
+				<div class="card z-depth-1" style="background-color: transparent;">
+					<div class="card-header grey lighten-2 py-1">
+						<div class="d-flex">
+							<div>
+								<span class="close-btn"><i class="fas fa-circle mr-1"></i></span>
+								<span class="max-btn"><i class="fas fa-circle mr-1"></i></span>
+								<span class="min-btn"><i class="fas fa-circle"></i></span>
+							</div>
+							<div class="flex-grow-1 d-flex justify-content-center">
+								<i class="far fa-hdd align-self-center mr-1"></i> ~James/CSS/custom-mac-window.html
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-3 sidebar">
+									<div class="text-uppercase text-muted font-weight-bolder py-3">Favourites</div>
+									<ul class="shortcut-list list-unstyled pl-3">
+										<li class="list-icon">
+											<i class="fas fa-file-alt"></i>All My Files
+										</li>
+										<li class="list-icon">
+											<i class="fab fa-app-store-ios"></i>Applications
+										</li>
+										<li class="list-icon">
+											<i class="fas fa-desktop"></i>Desktop
+										</li>
+										<li class="list-icon">
+											<i class="fas fa-copy"></i>Documents
+										</li>
+										<li class="list-icon">
+											<i class="fas fa-arrow-alt-circle-down"></i>Downloads
+										</li>
+										<li class="list-icon">
+											<i class="fas fa-lightbulb"></i>AirDrop
+										</li>
+									</ul>
+									<div class="text-uppercase text-muted font-weight-bolder py-3">Favourites</div>
+									<ul class="shortcut-list list-unstyled pl-3">
+										<li class="list-icon active">
+											<i class="far fa-hdd"></i>James <span class="float-right"><i class="fa fa-caret-down"></i></span>
+										</li>
+										<li class="list-icon">
+											<i class="far fa-hdd"></i>Bhatta <span class="float-right"><i class="fa fa-caret-down"></i></span>
+										</li>
+									</ul>
+									<div class="text-uppercase text-muted font-weight-bolder py-3">Medias</div>
+									<ul class="shortcut-list list-unstyled pl-3">
+										<li class="list-icon">
+											<i class="fas fa-music"></i></i>Music
+										</li>
+										<li class="list-icon">
+											<i class="fas fa-video"></i>Movies
+										</li>
+										<li class="list-icon">
+											<i class="fas fa-camera"></i>Pictures
+										</li>
+										<li class="list-icon">
+											<i class="fab fa-dropbox"></i>Dropbox
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-9 white">
+									<div class="row">
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>James</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Bhatta</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Having</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Some</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Fun</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+										<div class="col-md-2 px-0">
+											<div class="d-flex flex-column folder-wrapper">
+												<div class="folder-icon">
+													<i class="fas fa-folder-open"></i>
+												</div>
+												<div>Keychains</div>
+											</div>
+										</div>
+										<!-- End of folder -->
+									</div>
+									<!-- End of row -->
+								</div>
+							</div>
+							<!-- End of row -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Start your project here-->
+
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
