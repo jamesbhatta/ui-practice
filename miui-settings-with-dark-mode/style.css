@@ -59,6 +59,20 @@ body {
     width: 0;
 }
 
+/* Mobile Devices */
+
+@media only screen and (max-width: 600px) {
+    .page-wrapper {
+        display: block;
+    }
+    .frame {
+        max-width: 100%;
+        height: 100vh;
+        border-width: 0;
+        box-shadow: none;
+    }
+}
+
 /* Status Bar */
 
 .status-bar {
