@@ -1,0 +1,52 @@
+body {
+    /* background-color:  black; */
+    min-height: 100vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(53deg, rgba(2, 0, 36, 1) 0%, rgba(43, 103, 204, 1) 0%, rgba(58, 217, 201, 0.9900911048012955) 100%, rgba(28, 105, 251, 1) 129%);
+    background-attachment: fixed;
+    font-size: 23px;
+    color: #f5feff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#head {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#time {
+    min-width: 120px;
+}
+
+#time .sec {
+    font-size: 1.1rem;
+}
+
+.app-card {
+    border: 2px solid transparent;
+    padding: 50px;
+    min-height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    transition: all 0.2s linear;
+}
+
+.app-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.app-card .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e6e6e6;
+}
+
+.app-card:hover, .app-card.active {
+    border-color: #efefef;
+    transform: scale(1.05);
+}
